@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GitHub Pages: replace your-username with your GitHub username. For calcdesk.in later, use the commented block below. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://your-username.github.io/CalcDesk/</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://your-username.github.io/CalcDesk/salary-in-hand-calculator/</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://your-username.github.io/CalcDesk/ctc-breakup-calculator/</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://your-username.github.io/CalcDesk/exam-eligibility-checker/</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://your-username.github.io/CalcDesk/age-calculator-india/</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://your-username.github.io/CalcDesk/wedding-cost-calculator/</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://your-username.github.io/CalcDesk/unit-converter-india/</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://your-username.github.io/CalcDesk/bmi-calculator-india/</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://your-username.github.io/CalcDesk/about.html</loc><lastmod>2025-02-01</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://your-username.github.io/CalcDesk/contact.html</loc><lastmod>2025-02-01</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://your-username.github.io/CalcDesk/privacy-policy.html</loc><lastmod>2025-02-01</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+</urlset>
+<!-- calcdesk.in (uncomment when you use custom domain):
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://calcdesk.in/</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://calcdesk.in/salary-in-hand-calculator/</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calcdesk.in/ctc-breakup-calculator/</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calcdesk.in/exam-eligibility-checker/</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calcdesk.in/age-calculator-india/</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calcdesk.in/wedding-cost-calculator/</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calcdesk.in/unit-converter-india/</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calcdesk.in/bmi-calculator-india/</loc><lastmod>2025-02-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calcdesk.in/about.html</loc><lastmod>2025-02-01</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://calcdesk.in/contact.html</loc><lastmod>2025-02-01</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://calcdesk.in/privacy-policy.html</loc><lastmod>2025-02-01</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+</urlset>
+-->

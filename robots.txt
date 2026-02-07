@@ -1,0 +1,9 @@
+# CalcDesk – Allow search engines and ad crawlers
+# GitHub Pages: replace your-username with your GitHub username.
+# For calcdesk.in: use Sitemap: https://calcdesk.in/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://your-username.github.io/CalcDesk/sitemap.xml
+
+# Google AdSense crawlers are allowed (same as User-agent: *)
