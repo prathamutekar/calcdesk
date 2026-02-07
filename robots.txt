@@ -4,6 +4,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-username.github.io/CalcDesk/sitemap.xml
+Sitemap: https://prathamutekar.github.io/calcdesk/sitemap.xml
 
 # Google AdSense crawlers are allowed (same as User-agent: *)

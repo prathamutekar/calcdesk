@@ -4,7 +4,7 @@
 
 The project is configured to run on **GitHub Pages** at:
 
-**`https://your-username.github.io/CalcDesk/`**
+**`https://prathamutekar.github.io/calcdesk/`**
 
 Replace `your-username` with your actual GitHub username in the places listed below.
 

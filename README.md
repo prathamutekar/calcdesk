@@ -30,19 +30,19 @@ CalcDesk/
 
 ## URLs (GitHub Pages – replace `your-username` with your GitHub username)
 
-- `https://your-username.github.io/CalcDesk/` – Home
-- `https://your-username.github.io/CalcDesk/salary-in-hand-calculator/` – Salary In-Hand
-- `https://your-username.github.io/CalcDesk/ctc-breakup-calculator/` – CTC Breakup
-- `https://your-username.github.io/CalcDesk/exam-eligibility-checker/` – Exam Eligibility
-- `https://your-username.github.io/CalcDesk/age-calculator-india/` – Age Calculator
-- `https://your-username.github.io/CalcDesk/wedding-cost-calculator/` – Wedding Cost
-- `https://your-username.github.io/CalcDesk/unit-converter-india/` – Unit Converter
-- `https://your-username.github.io/CalcDesk/bmi-calculator-india/` – BMI Calculator
-- `https://your-username.github.io/CalcDesk/about.html` – About
-- `https://your-username.github.io/CalcDesk/contact.html` – Contact
-- `https://your-username.github.io/CalcDesk/privacy-policy.html` – Privacy Policy
-- `https://your-username.github.io/CalcDesk/sitemap.xml` – Sitemap
-- `https://your-username.github.io/CalcDesk/robots.txt` – Robots
+- `https://prathamutekar.github.io/calcdesk/` – Home
+- `https://prathamutekar.github.io/calcdesk/salary-in-hand-calculator/` – Salary In-Hand
+- `https://prathamutekar.github.io/calcdesk/ctc-breakup-calculator/` – CTC Breakup
+- `https://prathamutekar.github.io/calcdesk/exam-eligibility-checker/` – Exam Eligibility
+- `https://prathamutekar.github.io/calcdesk/age-calculator-india/` – Age Calculator
+- `https://prathamutekar.github.io/calcdesk/wedding-cost-calculator/` – Wedding Cost
+- `https://prathamutekar.github.io/calcdesk/unit-converter-india/` – Unit Converter
+- `https://prathamutekar.github.io/calcdesk/bmi-calculator-india/` – BMI Calculator
+- `https://prathamutekar.github.io/calcdesk/about.html` – About
+- `https://prathamutekar.github.io/calcdesk/contact.html` – Contact
+- `https://prathamutekar.github.io/calcdesk/privacy-policy.html` – Privacy Policy
+- `https://prathamutekar.github.io/calcdesk/sitemap.xml` – Sitemap
+- `https://prathamutekar.github.io/calcdesk/robots.txt` – Robots
 
 ## URLs (when using calcdesk.in – for reference, see DEPLOYMENT.md)
 
