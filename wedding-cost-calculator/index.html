@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Cost Calculator India – Estimate by Guests, City Tier | CalcDesk</title>
+  <meta name="description" content="Estimate your Indian wedding cost by guests, venue, catering and more. Free wedding cost calculator India with breakdown and tips.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0d6efd">
+  <meta name="author" content="CalcDesk">
+  <!-- GitHub Pages: replace your-username. For calcdesk.in use commented line below. -->
+  <link rel="canonical" href="https://your-username.github.io/CalcDesk/wedding-cost-calculator/">
+  <!-- <link rel="canonical" href="https://calcdesk.in/wedding-cost-calculator/"> -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-username.github.io/CalcDesk/wedding-cost-calculator/">
+  <!-- <meta property="og:url" content="https://calcdesk.in/wedding-cost-calculator/"> -->
+  <meta property="og:title" content="Wedding Cost Calculator India – Estimate by Guests, City Tier | CalcDesk">
+  <meta property="og:description" content="Estimate your Indian wedding cost by guests, venue, catering and more. Free wedding cost calculator India with breakdown and tips.">
+  <meta property="og:locale" content="en_IN">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Wedding Cost Calculator India – Estimate by Guests, City Tier | CalcDesk">
+  <meta name="twitter:description" content="Estimate your Indian wedding cost by guests, venue, catering and more. Free calculator with breakdown.">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Wedding Cost Calculator India","description":"Estimate Indian wedding cost by guests, venue, catering and choices.","applicationCategory":"FinanceApplication"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How much does a wedding cost in India?","acceptedAnswer":{"@type":"Answer","text":"Costs vary widely: small weddings can be ₹5–10 lakh, mid-scale ₹15–30 lakh, and large weddings ₹50 lakh+. Use our calculator for a rough estimate."}},
+    {"@type":"Question","name":"What are the main wedding cost components in India?","acceptedAnswer":{"@type":"Answer","text":"Venue, catering (per plate), decoration, photography, attire, jewellery, gifts, and miscellaneous. Guest count drives catering and venue size."}},
+    {"@type":"Question","name":"How can I reduce wedding cost in India?","acceptedAnswer":{"@type":"Answer","text":"Trim guest list, choose off-season dates, book venue and vendors early, limit decoration and photography packages, and set a budget per category."}}
+  ]}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="../" class="brand">CalcDesk</a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="../salary-in-hand-calculator/">Salary In-Hand</a></li>
+          <li><a href="../ctc-breakup-calculator/">CTC Breakup</a></li>
+          <li><a href="../exam-eligibility-checker/">Exam Eligibility</a></li>
+          <li><a href="../age-calculator-india/">Age Calculator</a></li>
+          <li><a href="../wedding-cost-calculator/">Wedding Cost</a></li>
+          <li><a href="../unit-converter-india/">Unit Converter</a></li>
+          <li><a href="../bmi-calculator-india/">BMI Calculator</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">Wedding Cost Calculator (India)</h1>
+    <p class="page-lead">Estimate Indian wedding cost by guests, city tier, venue, catering, and choices. Wedding cost calculator India with breakdown and tips.</p>
+
+    <section class="tool-card" aria-labelledby="calc-heading">
+      <h2 id="calc-heading">Estimate Wedding Cost</h2>
+      <p><strong>Assumptions:</strong> Costs scale by city tier (tier 1 > tier 2 > tier 3). Venue, catering, and other components are indicative; get quotes from vendors.</p>
+      <form id="wedding-form" novalidate>
+        <div class="form-group">
+          <label for="guests">Number of guests</label>
+          <input type="number" id="guests" name="guests" min="50" max="5000" step="50" placeholder="e.g. 300" required>
+          <span id="guests-error" class="error-msg" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+          <label for="city-tier">City tier</label>
+          <select id="city-tier" name="city-tier">
+            <option value="tier1">Tier 1 (metro)</option>
+            <option value="tier2">Tier 2</option>
+            <option value="tier3">Tier 3</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="venue">Venue type</label>
+          <select id="venue" name="venue">
+            <option value="budget">Budget (hall / community)</option>
+            <option value="mid">Mid-range (hotel / farmhouse)</option>
+            <option value="premium">Premium (5-star / destination)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="catering">Catering per plate (₹)</label>
+          <input type="number" id="catering" name="catering" min="300" max="5000" step="50" placeholder="e.g. 800" value="800">
+        </div>
+        <div class="form-group">
+          <label for="events">Number of events (e.g. 2 = engagement + wedding)</label>
+          <input type="number" id="events" name="events" min="1" max="5" value="2">
+        </div>
+        <button type="submit" class="btn btn-primary">Estimate Wedding Cost</button>
+      </form>
+
+      <div id="result-box" class="result-box" hidden aria-live="polite">
+        <h3>Estimated Wedding Cost</h3>
+        <div class="result-row"><span>Venue</span><span class="result-value" id="res-venue">—</span></div>
+        <div class="result-row"><span>Catering</span><span class="result-value" id="res-catering">—</span></div>
+        <div class="result-row"><span>Decoration</span><span class="result-value" id="res-decor">—</span></div>
+        <div class="result-row"><span>Photography / Video</span><span class="result-value" id="res-photo">—</span></div>
+        <div class="result-row"><span>Attire & Jewellery (approx.)</span><span class="result-value" id="res-attire">—</span></div>
+        <div class="result-row"><span>Miscellaneous</span><span class="result-value" id="res-misc">—</span></div>
+        <div class="result-row"><span><strong>Total (approx.)</strong></span><span class="result-value" id="res-total">—</span></div>
+      </div>
+    </section>
+
+    <section class="content-section" id="assumptions">
+      <h2>Assumptions & Tips</h2>
+      <p>This <strong>wedding cost calculator India</strong> uses typical per-guest and per-event assumptions. <strong>City tier</strong>: tier 1 (metro) applies a higher multiplier; tier 2 and tier 3 use lower base costs. <strong>Venue</strong>: budget ₹50–80k per event, mid ₹1.5–3L, premium ₹5L+ (scaled by tier). <strong>Catering</strong> is your per-plate input × guests × events. <strong>Decoration</strong>: ~15% of venue + catering. <strong>Photography</strong>: ~₹80k–2L depending on package. <strong>Attire & jewellery</strong>: fixed range (₹2–5L) as it varies a lot. <strong>Misc</strong>: gifts, invites, transport ~10% of above. Costs differ by city and season; use this as a starting point and get quotes from vendors.</p>
+      <p><strong>Tips to save:</strong> Trim guest list, choose off-season, fix a per-category budget, and compare multiple vendors. Use our <a href="../salary-in-hand-calculator/">Salary In-Hand Calculator</a> to see how much you can save monthly for the wedding.</p>
+    </section>
+
+    <section class="content-section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <ul class="faq-list">
+        <li>
+          <p class="faq-q">How much does a wedding cost in India?</p>
+          <p class="faq-a">Costs vary widely: small weddings can be ₹5–10 lakh, mid-scale ₹15–30 lakh, and large weddings ₹50 lakh+. Use our calculator for a rough estimate.</p>
+        </li>
+        <li>
+          <p class="faq-q">What are the main wedding cost components in India?</p>
+          <p class="faq-a">Venue, catering (per plate), decoration, photography, attire, jewellery, gifts, and miscellaneous. Guest count drives catering and venue size.</p>
+        </li>
+        <li>
+          <p class="faq-q">How can I reduce wedding cost in India?</p>
+          <p class="faq-a">Trim guest list, choose off-season dates, book venue and vendors early, limit decoration and photography packages, and set a budget per category.</p>
+        </li>
+      </ul>
+    </section>
+
+    <nav class="related-tools" aria-label="Related tools">
+      <h2>Also Try</h2>
+      <ul>
+        <li><a href="../salary-in-hand-calculator/">Salary In-Hand Calculator</a> – Plan savings from salary</li>
+        <li><a href="../ctc-breakup-calculator/">CTC Breakup Calculator</a> – Understand salary structure</li>
+        <li><a href="../age-calculator-india/">Age Calculator (India)</a> – Exact age in years, months, days</li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>© CalcDesk</strong></p>
+      <p class="footer-disclaimer">Informational utility tools for Indian users. Results are indicative; verify with official sources.</p>
+      <p><a href="../about.html">About</a> · <a href="../contact.html">Contact</a> · <a href="../privacy-policy.html">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script>
+  /* Wedding Cost Calculator – minimal JS; city tier and venue scale costs */
+  (function() {
+    var form = document.getElementById('wedding-form');
+    var resultBox = document.getElementById('result-box');
+    var guestsInput = document.getElementById('guests');
+    var guestsError = document.getElementById('guests-error');
+
+    function formatINR(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+
+    var venueBase = { budget: 60000, mid: 200000, premium: 500000 };
+    var tierMultiplier = { tier1: 1.3, tier2: 1.0, tier3: 0.75 };
+    var decorPct = 0.15;
+    var photoBase = { budget: 80000, mid: 120000, premium: 200000 };
+    var attireBase = 250000;
+    var miscPct = 0.10;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      guestsError.textContent = '';
+      var guests = parseInt(guestsInput.value, 10);
+      if (isNaN(guests) || guests < 50) {
+        guestsError.textContent = 'Please enter at least 50 guests.';
+        return;
+      }
+      var cityTier = document.getElementById('city-tier').value;
+      var tierMult = tierMultiplier[cityTier] || 1;
+      var venueType = document.getElementById('venue').value;
+      var perPlate = parseInt(document.getElementById('catering').value, 10) || 800;
+      var events = parseInt(document.getElementById('events').value, 10) || 2;
+
+      var venueCost = venueBase[venueType] * events * tierMult;
+      var cateringCost = guests * perPlate * events * tierMult;
+      var decorCost = (venueCost + cateringCost) * decorPct;
+      var photoCost = photoBase[venueType] * tierMult;
+      var attireCost = attireBase;
+      var subTotal = venueCost + cateringCost + decorCost + photoCost + attireCost;
+      var miscCost = subTotal * miscPct;
+      var total = subTotal + miscCost;
+
+      document.getElementById('res-venue').textContent = formatINR(venueCost);
+      document.getElementById('res-catering').textContent = formatINR(cateringCost);
+      document.getElementById('res-decor').textContent = formatINR(decorCost);
+      document.getElementById('res-photo').textContent = formatINR(photoCost);
+      document.getElementById('res-attire').textContent = formatINR(attireCost);
+      document.getElementById('res-misc').textContent = formatINR(miscCost);
+      document.getElementById('res-total').textContent = formatINR(total);
+      resultBox.hidden = false;
+      resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  })();
+  </script>
+  <script src="../js/nav.js"></script>
+</body>
+</html>

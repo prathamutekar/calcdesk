@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator India – Body Mass Index Calculator | CalcDesk</title>
+  <meta name="description" content="Calculate your BMI (Body Mass Index) for Indian adults. Free BMI calculator India – enter height and weight to check if you're underweight, normal, overweight, or obese.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0d6efd">
+  <meta name="author" content="CalcDesk">
+  <!-- GitHub Pages: replace your-username. For calcdesk.in use commented line below. -->
+  <link rel="canonical" href="https://your-username.github.io/CalcDesk/bmi-calculator-india/">
+  <!-- <link rel="canonical" href="https://calcdesk.in/bmi-calculator-india/"> -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-username.github.io/CalcDesk/bmi-calculator-india/">
+  <!-- <meta property="og:url" content="https://calcdesk.in/bmi-calculator-india/"> -->
+  <meta property="og:title" content="BMI Calculator India – Body Mass Index Calculator | CalcDesk">
+  <meta property="og:description" content="Calculate your BMI (Body Mass Index) for Indian adults. Free BMI calculator India – enter height and weight to check if you're underweight, normal, overweight, or obese.">
+  <meta property="og:locale" content="en_IN">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BMI Calculator India – Body Mass Index Calculator | CalcDesk">
+  <meta name="twitter:description" content="Calculate your BMI (Body Mass Index) for Indian adults. Free BMI calculator India.">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"BMI Calculator India","description":"Calculate Body Mass Index (BMI) for Indian adults. Check if you're underweight, normal, overweight, or obese.","applicationCategory":"HealthApplication","operatingSystem":"Any"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How is BMI calculated?","acceptedAnswer":{"@type":"Answer","text":"BMI = weight (kg) / height (m)². For example, if you weigh 70 kg and are 1.75 m tall, BMI = 70 / (1.75 × 1.75) = 22.86."}},
+    {"@type":"Question","name":"What is a normal BMI for Indians?","acceptedAnswer":{"@type":"Answer","text":"For Indian adults, normal BMI is 18.5–22.9. Underweight: below 18.5, Overweight: 23–24.9, Obese: 25 and above. Indian population has higher health risks at lower BMI than Caucasians."}},
+    {"@type":"Question","name":"Is BMI accurate for everyone?","acceptedAnswer":{"@type":"Answer","text":"BMI is a screening tool, not a diagnostic. It doesn't account for muscle mass, bone density, or fat distribution. Athletes and elderly may have misleading BMI. Consult a doctor for health assessment."}}
+  ]}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="../" class="brand">CalcDesk</a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="../salary-in-hand-calculator/">Salary In-Hand</a></li>
+          <li><a href="../ctc-breakup-calculator/">CTC Breakup</a></li>
+          <li><a href="../exam-eligibility-checker/">Exam Eligibility</a></li>
+          <li><a href="../age-calculator-india/">Age Calculator</a></li>
+          <li><a href="../wedding-cost-calculator/">Wedding Cost</a></li>
+          <li><a href="../unit-converter-india/">Unit Converter</a></li>
+          <li><a href="../bmi-calculator-india/">BMI Calculator</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">BMI Calculator (India)</h1>
+    <p class="page-lead">Calculate your Body Mass Index (BMI) for Indian adults. Enter your height and weight to check if you're underweight, normal weight, overweight, or obese. Free BMI calculator India.</p>
+
+    <section class="tool-card" aria-labelledby="calc-heading">
+      <h2 id="calc-heading">Calculate BMI</h2>
+      <form id="bmi-form" novalidate>
+        <div class="form-group">
+          <label for="unit">Unit system</label>
+          <select id="unit" name="unit">
+            <option value="metric">Metric (cm, kg)</option>
+            <option value="imperial">Imperial (ft/in, lbs)</option>
+          </select>
+        </div>
+        <div class="form-group" id="height-group">
+          <label for="height">Height (cm)</label>
+          <input type="number" id="height" name="height" min="100" max="250" step="0.1" placeholder="e.g. 170" required>
+          <span id="height-error" class="error-msg" aria-live="polite"></span>
+        </div>
+        <div class="form-group" id="weight-group">
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" name="weight" min="20" max="300" step="0.1" placeholder="e.g. 70" required>
+          <span id="weight-error" class="error-msg" aria-live="polite"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Calculate BMI</button>
+      </form>
+
+      <div id="result-box" class="result-box" hidden aria-live="polite">
+        <h3>Your BMI Result</h3>
+        <div class="result-row"><span>BMI</span><span class="result-value" id="res-bmi">—</span></div>
+        <div class="result-row"><span>Category</span><span class="result-value" id="res-category">—</span></div>
+        <div id="res-note" style="margin-top:1rem; padding:0.75rem; background:var(--color-bg); border-radius:var(--radius); font-size:0.9rem;"></div>
+      </div>
+    </section>
+
+    <section class="content-section" id="how-it-works">
+      <h2>How This BMI Calculator Works</h2>
+      <p>This <strong>BMI calculator India</strong> computes your Body Mass Index using the standard formula: <strong>BMI = weight (kg) / height (m)²</strong>. BMI is a screening tool that estimates body fat based on height and weight. It's widely used in India for health assessments, insurance, and fitness tracking.</p>
+      <p><strong>BMI Categories for Indian Adults (as per ICMR guidelines):</strong> <strong>Underweight:</strong> BMI below 18.5 (may indicate malnutrition or health issues). <strong>Normal weight:</strong> BMI 18.5–22.9 (healthy range for most Indians). <strong>Overweight:</strong> BMI 23–24.9 (increased health risk). <strong>Obese:</strong> BMI 25 and above (higher risk of diabetes, heart disease, hypertension). Indian population has higher health risks at lower BMI compared to Caucasians, so the thresholds are adjusted.</p>
+      <p><strong>Common Indian use cases:</strong> <strong>Health checkups</strong>—doctors use BMI to assess weight-related health risks. <strong>Insurance</strong>—some policies consider BMI for premium calculation. <strong>Fitness goals</strong>—track progress when losing or gaining weight. <strong>Government exams</strong>—some physical tests have BMI requirements. <strong>Pregnancy</strong>—BMI helps determine healthy weight gain during pregnancy. Note: BMI doesn't account for muscle mass, bone density, or fat distribution. Athletes, bodybuilders, and elderly may have misleading BMI. Always consult a healthcare professional for a complete health assessment.</p>
+    </section>
+
+    <section class="content-section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <ul class="faq-list">
+        <li>
+          <p class="faq-q">How is BMI calculated?</p>
+          <p class="faq-a">BMI = weight (kg) / height (m)². For example, if you weigh 70 kg and are 1.75 m tall, BMI = 70 / (1.75 × 1.75) = 22.86, which is in the normal range for Indians.</p>
+        </li>
+        <li>
+          <p class="faq-q">What is a normal BMI for Indians?</p>
+          <p class="faq-a">For Indian adults, normal BMI is 18.5–22.9. Underweight: below 18.5, Overweight: 23–24.9, Obese: 25 and above. Indian population has higher health risks at lower BMI than Caucasians, so thresholds are adjusted.</p>
+        </li>
+        <li>
+          <p class="faq-q">Is BMI accurate for everyone?</p>
+          <p class="faq-a">BMI is a screening tool, not a diagnostic. It doesn't account for muscle mass, bone density, or fat distribution. Athletes, bodybuilders, and elderly may have misleading BMI. Consult a doctor for a complete health assessment.</p>
+        </li>
+        <li>
+          <p class="faq-q">Can I use BMI for children?</p>
+          <p class="faq-a">BMI calculation for children and teens uses age and sex-specific percentiles, not fixed categories. This calculator is for adults (18+). For children, consult a pediatrician or use age-specific BMI charts.</p>
+        </li>
+        <li>
+          <p class="faq-q">What if my BMI is in the overweight or obese range?</p>
+          <p class="faq-a">If your BMI indicates overweight or obesity, consider consulting a doctor or nutritionist. They can help create a safe weight management plan. Focus on balanced diet, regular exercise, and lifestyle changes rather than crash diets.</p>
+        </li>
+      </ul>
+    </section>
+
+    <nav class="related-tools" aria-label="Related tools">
+      <h2>Also Try</h2>
+      <ul>
+        <li><a href="../age-calculator-india/">Age Calculator (India)</a> – Exact age in years, months, days</li>
+        <li><a href="../exam-eligibility-checker/">Government Exam Eligibility Checker</a> – Check exam eligibility</li>
+        <li><a href="../unit-converter-india/">Unit Converter (India)</a> – Tola, bigha, guntha</li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>© CalcDesk</strong></p>
+      <p class="footer-disclaimer">Informational utility tools for Indian users. Results are indicative; verify with official sources.</p>
+      <p><a href="../about.html">About</a> · <a href="../contact.html">Contact</a> · <a href="../privacy-policy.html">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    var form = document.getElementById('bmi-form');
+    var resultBox = document.getElementById('result-box');
+    var unitSelect = document.getElementById('unit');
+    var heightInput = document.getElementById('height');
+    var weightInput = document.getElementById('weight');
+    var heightGroup = document.getElementById('height-group');
+    var weightGroup = document.getElementById('weight-group');
+    var heightLabel = heightGroup.querySelector('label');
+    var weightLabel = weightGroup.querySelector('label');
+    var heightError = document.getElementById('height-error');
+    var weightError = document.getElementById('weight-error');
+
+    function updateUnits() {
+      var isMetric = unitSelect.value === 'metric';
+      if (isMetric) {
+        heightLabel.textContent = 'Height (cm)';
+        weightLabel.textContent = 'Weight (kg)';
+        heightInput.setAttribute('min', '100');
+        heightInput.setAttribute('max', '250');
+        heightInput.setAttribute('placeholder', 'e.g. 170');
+        weightInput.setAttribute('min', '20');
+        weightInput.setAttribute('max', '300');
+        weightInput.setAttribute('placeholder', 'e.g. 70');
+      } else {
+        heightLabel.textContent = 'Height (ft)';
+        weightLabel.textContent = 'Weight (lbs)';
+        heightInput.setAttribute('min', '3');
+        heightInput.setAttribute('max', '8');
+        heightInput.setAttribute('step', '0.1');
+        heightInput.setAttribute('placeholder', 'e.g. 5.6');
+        weightInput.setAttribute('min', '44');
+        weightInput.setAttribute('max', '660');
+        weightInput.setAttribute('placeholder', 'e.g. 154');
+      }
+      heightInput.value = '';
+      weightInput.value = '';
+      resultBox.hidden = true;
+    }
+
+    unitSelect.addEventListener('change', updateUnits);
+
+    function getBMICategory(bmi) {
+      if (bmi < 18.5) return { text: 'Underweight', color: 'var(--color-primary)' };
+      if (bmi < 23) return { text: 'Normal weight', color: 'var(--color-success)' };
+      if (bmi < 25) return { text: 'Overweight', color: '#ff9800' };
+      return { text: 'Obese', color: 'var(--color-error)' };
+    }
+
+    function getBMINote(category) {
+      var notes = {
+        'Underweight': 'Consider consulting a doctor or nutritionist. Focus on balanced nutrition and healthy weight gain.',
+        'Normal weight': 'You are in a healthy weight range for Indian adults. Maintain a balanced diet and regular exercise.',
+        'Overweight': 'Consider lifestyle changes: balanced diet, regular exercise. Consult a healthcare professional for guidance.',
+        'Obese': 'Consult a doctor or nutritionist for a safe weight management plan. Focus on gradual, sustainable changes.'
+      };
+      return notes[category] || '';
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      heightError.textContent = '';
+      weightError.textContent = '';
+      resultBox.hidden = true;
+
+      var unit = unitSelect.value;
+      var height = parseFloat(heightInput.value);
+      var weight = parseFloat(weightInput.value);
+
+      if (isNaN(height) || height <= 0) {
+        heightError.textContent = 'Please enter a valid height.';
+        heightInput.focus();
+        return;
+      }
+
+      if (isNaN(weight) || weight <= 0) {
+        weightError.textContent = 'Please enter a valid weight.';
+        weightInput.focus();
+        return;
+      }
+
+      var heightM, weightKg;
+
+      if (unit === 'metric') {
+        if (height < 100 || height > 250) {
+          heightError.textContent = 'Height should be between 100 and 250 cm.';
+          heightInput.focus();
+          return;
+        }
+        if (weight < 20 || weight > 300) {
+          weightError.textContent = 'Weight should be between 20 and 300 kg.';
+          weightInput.focus();
+          return;
+        }
+        heightM = height / 100;
+        weightKg = weight;
+      } else {
+        if (height < 3 || height > 8) {
+          heightError.textContent = 'Height should be between 3 and 8 feet.';
+          heightInput.focus();
+          return;
+        }
+        if (weight < 44 || weight > 660) {
+          weightError.textContent = 'Weight should be between 44 and 660 lbs.';
+          weightInput.focus();
+          return;
+        }
+        heightM = height * 0.3048;
+        weightKg = weight * 0.453592;
+      }
+
+      var bmi = weightKg / (heightM * heightM);
+      var category = getBMICategory(bmi);
+      var note = getBMINote(category.text);
+
+      document.getElementById('res-bmi').textContent = bmi.toFixed(1);
+      document.getElementById('res-category').textContent = category.text;
+      document.getElementById('res-category').style.color = category.color;
+      document.getElementById('res-note').textContent = note;
+      resultBox.hidden = false;
+      resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  })();
+  </script>
+  <script src="../js/nav.js"></script>
+</body>
+</html>

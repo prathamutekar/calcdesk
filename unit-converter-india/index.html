@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Converter India – Tola, Bigha, Guntha, Metric | CalcDesk</title>
+  <meta name="description" content="Convert Indian units (tola, bigha, guntha) and metric units. Free unit converter India for weight, area and length. No signup.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0d6efd">
+  <meta name="author" content="CalcDesk">
+  <!-- GitHub Pages: replace your-username. For calcdesk.in use commented line below. -->
+  <link rel="canonical" href="https://your-username.github.io/CalcDesk/unit-converter-india/">
+  <!-- <link rel="canonical" href="https://calcdesk.in/unit-converter-india/"> -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-username.github.io/CalcDesk/unit-converter-india/">
+  <!-- <meta property="og:url" content="https://calcdesk.in/unit-converter-india/"> -->
+  <meta property="og:title" content="Unit Converter India – Tola, Bigha, Guntha, Metric | CalcDesk">
+  <meta property="og:description" content="Convert Indian units (tola, bigha, guntha) and metric units. Free unit converter India for weight, area and length. No signup.">
+  <meta property="og:locale" content="en_IN">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Unit Converter India – Tola, Bigha, Guntha, Metric | CalcDesk">
+  <meta name="twitter:description" content="Convert Indian units (tola, bigha, guntha) and metric units. Free unit converter India.">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Unit Converter India","description":"Convert Indian traditional units (tola, bigha, guntha) and metric units.","applicationCategory":"UtilitiesApplication"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How many grams is 1 tola?","acceptedAnswer":{"@type":"Answer","text":"1 tola = 11.664 grams (standard in India for gold/silver)."}},
+    {"@type":"Question","name":"How much is 1 bigha in square feet?","acceptedAnswer":{"@type":"Answer","text":"It varies by state. In many regions 1 bigha ≈ 27,000 sq ft (e.g. UP). We use a common reference; check local standards for land."}},
+    {"@type":"Question","name":"What is 1 guntha in square feet?","acceptedAnswer":{"@type":"Answer","text":"1 guntha = 1,089 square feet (used in Maharashtra, Karnataka, etc. for land)."}}
+  ]}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="../" class="brand">CalcDesk</a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="../salary-in-hand-calculator/">Salary In-Hand</a></li>
+          <li><a href="../ctc-breakup-calculator/">CTC Breakup</a></li>
+          <li><a href="../exam-eligibility-checker/">Exam Eligibility</a></li>
+          <li><a href="../age-calculator-india/">Age Calculator</a></li>
+          <li><a href="../wedding-cost-calculator/">Wedding Cost</a></li>
+          <li><a href="../unit-converter-india/">Unit Converter</a></li>
+          <li><a href="../bmi-calculator-india/">BMI Calculator</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">Unit Converter (Indian Traditional & Metric)</h1>
+    <p class="page-lead">Convert Indian units—tola to gram, bigha to sq ft, guntha, acre—and metric. Indian unit converter: bigha to sq ft, tola to gram. Free for India.</p>
+
+    <section class="tool-card" aria-labelledby="calc-heading">
+      <h2 id="calc-heading">Convert Units</h2>
+      <form id="converter-form">
+        <div class="form-group">
+          <label for="conv-type">Conversion type</label>
+          <select id="conv-type" name="conv-type">
+            <option value="tola-gram">Tola → Grams</option>
+            <option value="gram-tola">Grams → Tola</option>
+            <option value="bigha-sqft">Bigha → Square feet</option>
+            <option value="sqft-bigha">Square feet → Bigha</option>
+            <option value="guntha-sqft">Guntha → Square feet</option>
+            <option value="sqft-guntha">Square feet → Guntha</option>
+            <option value="acre-sqft">Acre → Square feet</option>
+            <option value="sqft-acre">Square feet → Acre</option>
+            <option value="km-miles">Kilometres → Miles</option>
+            <option value="miles-km">Miles → Kilometres</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="input-val">Value to convert</label>
+          <input type="number" id="input-val" name="input-val" min="0" step="any" placeholder="e.g. 5" required>
+          <span id="input-error" class="error-msg" aria-live="polite"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Convert</button>
+      </form>
+
+      <div id="result-box" class="result-box" hidden aria-live="polite">
+        <h3>Result</h3>
+        <p id="result-text" style="margin:0; font-size:1.1rem;"></p>
+      </div>
+    </section>
+
+    <section class="content-section" id="explanations">
+      <h2>Indian & Metric Units Explained</h2>
+      <p><strong>Tola</strong> is used in India for gold and silver. 1 tola = 11.664 grams. <strong>Bigha</strong> is a land area unit; it varies by state (e.g. UP ~27,000 sq ft, Bihar ~27,220 sq ft). We use 27,000 sq ft as a common reference—always confirm with local standards for land deals. <strong>Guntha</strong> is used in Maharashtra, Karnataka, etc.: 1 guntha = 1,089 sq ft. <strong>Acre</strong>: 1 acre = 43,560 sq ft. For length, 1 km ≈ 0.621371 miles.</p>
+    </section>
+
+    <section class="content-section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <ul class="faq-list">
+        <li>
+          <p class="faq-q">How many grams is 1 tola?</p>
+          <p class="faq-a">1 tola = 11.664 grams (standard in India for gold/silver).</p>
+        </li>
+        <li>
+          <p class="faq-q">How much is 1 bigha in square feet?</p>
+          <p class="faq-a">It varies by state. In many regions 1 bigha ≈ 27,000 sq ft (e.g. UP). We use a common reference; check local standards for land.</p>
+        </li>
+        <li>
+          <p class="faq-q">What is 1 guntha in square feet?</p>
+          <p class="faq-a">1 guntha = 1,089 square feet (used in Maharashtra, Karnataka, etc. for land).</p>
+        </li>
+      </ul>
+    </section>
+
+    <nav class="related-tools" aria-label="Related tools">
+      <h2>Also Try</h2>
+      <ul>
+        <li><a href="../age-calculator-india/">Age Calculator (India)</a> – Exact age in years, months, days</li>
+        <li><a href="../salary-in-hand-calculator/">Salary In-Hand Calculator</a> – CTC to in-hand</li>
+        <li><a href="../wedding-cost-calculator/">Wedding Cost Calculator</a> – Estimate wedding budget</li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>© CalcDesk</strong></p>
+      <p class="footer-disclaimer">Informational utility tools for Indian users. Results are indicative; verify with official sources.</p>
+      <p><a href="../about.html">About</a> · <a href="../contact.html">Contact</a> · <a href="../privacy-policy.html">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    var TOLA_GRAM = 11.664;
+    var BIGHA_SQFT = 27000;
+    var GUNTHA_SQFT = 1089;
+    var ACRE_SQFT = 43560;
+    var KM_MILES = 0.621371;
+
+    var form = document.getElementById('converter-form');
+    var resultBox = document.getElementById('result-box');
+    var resultText = document.getElementById('result-text');
+    var inputVal = document.getElementById('input-val');
+    var inputError = document.getElementById('input-error');
+    var convType = document.getElementById('conv-type');
+
+    function roundVal(n) { return Math.round(n * 10000) / 10000; }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      inputError.textContent = '';
+      var val = parseFloat(inputVal.value, 10);
+      if (isNaN(val) || val < 0) {
+        inputError.textContent = 'Please enter a valid number.';
+        return;
+      }
+      var type = convType.value;
+      var out = 0;
+      var unitOut = '';
+      switch (type) {
+        case 'tola-gram': out = val * TOLA_GRAM; unitOut = ' grams'; break;
+        case 'gram-tola': out = val / TOLA_GRAM; unitOut = ' tola'; break;
+        case 'bigha-sqft': out = val * BIGHA_SQFT; unitOut = ' sq ft'; break;
+        case 'sqft-bigha': out = val / BIGHA_SQFT; unitOut = ' bigha'; break;
+        case 'guntha-sqft': out = val * GUNTHA_SQFT; unitOut = ' sq ft'; break;
+        case 'sqft-guntha': out = val / GUNTHA_SQFT; unitOut = ' guntha'; break;
+        case 'acre-sqft': out = val * ACRE_SQFT; unitOut = ' sq ft'; break;
+        case 'sqft-acre': out = val / ACRE_SQFT; unitOut = ' acre'; break;
+        case 'km-miles': out = val * KM_MILES; unitOut = ' miles'; break;
+        case 'miles-km': out = val / KM_MILES; unitOut = ' km'; break;
+      }
+      resultText.textContent = val + ' → ' + roundVal(out).toLocaleString('en-IN') + unitOut;
+      resultBox.hidden = false;
+      resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  })();
+  </script>
+  <script src="../js/nav.js"></script>
+</body>
+</html>

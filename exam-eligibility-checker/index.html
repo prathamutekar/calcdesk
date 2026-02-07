@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Government Exam Eligibility Checker India | CalcDesk</title>
+  <meta name="description" content="Check which Indian government exams you are eligible for. Enter age, education, category – get exam eligibility India and government exam age eligibility.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0d6efd">
+  <meta name="author" content="CalcDesk">
+  <!-- GitHub Pages: replace your-username. For calcdesk.in use commented line below. -->
+  <link rel="canonical" href="https://your-username.github.io/CalcDesk/exam-eligibility-checker/">
+  <!-- <link rel="canonical" href="https://calcdesk.in/exam-eligibility-checker/"> -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-username.github.io/CalcDesk/exam-eligibility-checker/">
+  <!-- <meta property="og:url" content="https://calcdesk.in/exam-eligibility-checker/"> -->
+  <meta property="og:title" content="Government Exam Eligibility Checker India | CalcDesk">
+  <meta property="og:description" content="Check which Indian government exams you are eligible for. Enter age, education, category – get exam eligibility India and government exam age eligibility.">
+  <meta property="og:locale" content="en_IN">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Government Exam Eligibility Checker India | CalcDesk">
+  <meta name="twitter:description" content="Check which Indian government exams you are eligible for. Enter age, education, category.">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Government Exam Eligibility Checker India","description":"Check eligibility for Indian government exams by age, education and category.","applicationCategory":"UtilitiesApplication"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is the age limit for SSC CGL?","acceptedAnswer":{"@type":"Answer","text":"SSC CGL general category age limit is 18–32 years. OBC/EWS up to 35, SC/ST up to 37. Relaxation varies by post."}},
+    {"@type":"Question","name":"What is the age limit for UPSC Civil Services?","acceptedAnswer":{"@type":"Answer","text":"UPSC Civil Services (IAS) age limit: General 21–32, OBC 21–35, SC/ST 21–37. Number of attempts also vary by category."}},
+    {"@type":"Question","name":"Where are exam eligibility rules taken from?","acceptedAnswer":{"@type":"Answer","text":"Rules are based on official notifications from SSC, UPSC, RRB, IBPS, and state boards (updated as of February 2026). Always confirm with the latest official notification."}}
+  ]}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="../" class="brand">CalcDesk</a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="../salary-in-hand-calculator/">Salary In-Hand</a></li>
+          <li><a href="../ctc-breakup-calculator/">CTC Breakup</a></li>
+          <li><a href="../exam-eligibility-checker/">Exam Eligibility</a></li>
+          <li><a href="../age-calculator-india/">Age Calculator</a></li>
+          <li><a href="../wedding-cost-calculator/">Wedding Cost</a></li>
+          <li><a href="../unit-converter-india/">Unit Converter</a></li>
+          <li><a href="../bmi-calculator-india/">BMI Calculator</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">Government Exam Eligibility Checker (India)</h1>
+    <p class="page-lead">Enter your age, education level, and category to see which Indian government exams you may be eligible for. Exam eligibility India and government exam age eligibility—quick reference based on latest notifications (updated February 2026).</p>
+
+    <p class="disclaimer-inline" style="background:#fff3cd; border:1px solid #ffc107; padding:0.5rem 0.75rem; border-radius:8px; margin-bottom:1rem;"><strong>Disclaimer:</strong> Eligibility is indicative; verify with official notifications from respective exam authorities. Age limits and criteria may vary by post and exam cycle.</p>
+
+    <section class="tool-card" aria-labelledby="calc-heading">
+      <h2 id="calc-heading">Check Eligibility</h2>
+      <form id="exam-form" novalidate>
+        <div class="form-group">
+          <label for="age">Your age (years)</label>
+          <input type="number" id="age" name="age" min="17" max="50" placeholder="e.g. 25" required>
+          <span id="age-error" class="error-msg" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+          <label for="edu">Education</label>
+          <select id="edu" name="edu">
+            <option value="10th">10th pass</option>
+            <option value="12th">12th pass</option>
+            <option value="graduate">Graduate</option>
+            <option value="postgraduate">Post Graduate</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="cat">Category</label>
+          <select id="cat" name="cat">
+            <option value="gen">General</option>
+            <option value="obc">OBC</option>
+            <option value="sc">SC</option>
+            <option value="st">ST</option>
+            <option value="ews">EWS</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Check Eligible Exams</button>
+      </form>
+
+      <div id="result-box" class="result-box" hidden aria-live="polite">
+        <h3>Exams you may be eligible for</h3>
+        <div id="exam-list-container"></div>
+        <p id="disclaimer" style="margin:0.75rem 0 0; font-size:0.9rem; color:var(--color-text-muted);"><strong>Eligibility is indicative; verify with official notifications.</strong> Age limits, attempt limits, and post-specific requirements can change. Always check the latest notification from the exam authority.</p>
+      </div>
+    </section>
+
+    <section class="content-section" id="logic">
+      <h2>Logic & Data Sources (Updated February 2026)</h2>
+      <p>This government exam eligibility checker uses <strong>static rules</strong> based on official notifications and typical eligibility criteria for major Indian government exams. Data is compiled from SSC (ssc.gov.in), UPSC (upsc.gov.in), RRB (indianrailways.gov.in), IBPS (ibps.in), and other official sources as of February 2026.</p>
+      
+      <h3>UPSC Exams</h3>
+      <ul>
+        <li><strong>Civil Services (IAS/IPS/IFS):</strong> Age 21–32 (General), 21–35 (OBC), 21–37 (SC/ST), 21–32 (EWS). Graduation required. Attempts: 6 (General), 9 (OBC), unlimited (SC/ST).</li>
+        <li><strong>CDS (Combined Defence Services):</strong> Age 20–24 (Air Force), 19–25 (IMA/INA), 19–25 (OTA). Graduation required (except for IMA/INA which require 12th).</li>
+        <li><strong>NDA (National Defence Academy):</strong> Age 16.5–19.5 years. 12th pass (for Army/Navy/Air Force).</li>
+        <li><strong>CAPF (Central Armed Police Forces):</strong> Age 20–25 (General), 20–28 (OBC), 20–30 (SC/ST). Graduation required.</li>
+      </ul>
+
+      <h3>SSC Exams</h3>
+      <ul>
+        <li><strong>SSC CGL (Combined Graduate Level):</strong> Age 18–32 (General), 18–35 (OBC/EWS), 18–37 (SC/ST). Graduation required. Age varies by post.</li>
+        <li><strong>SSC CHSL (Combined Higher Secondary Level):</strong> Age 18–27 (General), 18–30 (OBC), 18–32 (SC/ST), 18–27 (EWS). 12th pass required.</li>
+        <li><strong>SSC MTS (Multi-Tasking Staff):</strong> Age 18–27 (General), 18–30 (OBC), 18–32 (SC/ST), 18–27 (EWS). 10th pass required.</li>
+        <li><strong>SSC JE (Junior Engineer):</strong> Age 18–32 (General), 18–35 (OBC/EWS), 18–37 (SC/ST). Diploma/Degree in Engineering required.</li>
+        <li><strong>SSC GD Constable:</strong> Age 18–23 (General), 18–26 (OBC), 18–28 (SC/ST), 18–23 (EWS). 10th pass required.</li>
+      </ul>
+
+      <h3>Railway Exams (RRB)</h3>
+      <ul>
+        <li><strong>RRB NTPC (Graduate posts):</strong> Age 18–33 (General), 18–36 (OBC), 18–38 (SC/ST), 18–33 (EWS). Graduation required.</li>
+        <li><strong>RRB NTPC (12th posts):</strong> Age 18–30 (General), 18–33 (OBC), 18–35 (SC/ST), 18–30 (EWS). 12th pass required.</li>
+        <li><strong>RRB Group D:</strong> Age 18–33 (General), 18–36 (OBC), 18–38 (SC/ST), 18–33 (EWS). 10th pass required.</li>
+        <li><strong>RRB ALP (Assistant Loco Pilot):</strong> Age 18–30 (General), 18–33 (OBC), 18–35 (SC/ST), 18–30 (EWS). 10th + ITI or Diploma required.</li>
+        <li><strong>RRB JE (Junior Engineer):</strong> Age 18–33 (General), 18–36 (OBC), 18–38 (SC/ST), 18–33 (EWS). Diploma/Degree in Engineering required.</li>
+      </ul>
+
+      <h3>Banking Exams (IBPS)</h3>
+      <ul>
+        <li><strong>IBPS PO (Probationary Officer):</strong> Age 20–30 (General), 20–33 (OBC), 20–35 (SC/ST), 20–30 (EWS). Graduation required.</li>
+        <li><strong>IBPS Clerk:</strong> Age 20–28 (General), 20–31 (OBC), 20–33 (SC/ST), 20–28 (EWS). Graduation required.</li>
+        <li><strong>IBPS SO (Specialist Officer):</strong> Age 20–30 (General), 20–33 (OBC), 20–35 (SC/ST), 20–30 (EWS). Graduation + relevant specialization required.</li>
+        <li><strong>SBI PO:</strong> Age 21–30 (General), 21–33 (OBC), 21–35 (SC/ST), 21–30 (EWS). Graduation required.</li>
+        <li><strong>SBI Clerk:</strong> Age 20–28 (General), 20–31 (OBC), 20–33 (SC/ST), 20–28 (EWS). Graduation required.</li>
+      </ul>
+
+      <h3>Other Major Exams</h3>
+      <ul>
+        <li><strong>LIC AAO (Assistant Administrative Officer):</strong> Age 21–30 (General), 21–33 (OBC), 21–35 (SC/ST), 21–30 (EWS). Graduation required.</li>
+        <li><strong>LIC ADO (Apprentice Development Officer):</strong> Age 21–30 (General), 21–33 (OBC), 21–35 (SC/ST), 21–30 (EWS). Graduation required.</li>
+        <li><strong>RBI Grade B:</strong> Age 21–30 (General), 21–33 (OBC), 21–35 (SC/ST), 21–30 (EWS). Graduation required.</li>
+        <li><strong>RBI Assistant:</strong> Age 20–28 (General), 20–31 (OBC), 20–33 (SC/ST), 20–28 (EWS). Graduation required.</li>
+        <li><strong>State PSC:</strong> Age limits vary by state (typically 21–35 for General, with relaxations). Graduation usually required. Check state-specific notifications.</li>
+      </ul>
+
+      <p><strong>Note:</strong> Age relaxations apply for reserved categories, ex-servicemen, and PWD candidates. Some exams have post-specific age limits. Always refer to the official notification for the exact exam cycle you are applying for.</p>
+    </section>
+
+    <section class="content-section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <ul class="faq-list">
+        <li>
+          <p class="faq-q">What is the age limit for SSC CGL?</p>
+          <p class="faq-a">SSC CGL general category age limit is 18–32 years. OBC/EWS up to 35, SC/ST up to 37. Age limits vary by specific post within CGL.</p>
+        </li>
+        <li>
+          <p class="faq-q">What is the age limit for UPSC Civil Services?</p>
+          <p class="faq-a">UPSC Civil Services (IAS/IPS/IFS) age limit: General 21–32, OBC 21–35, SC/ST 21–37, EWS 21–32. Number of attempts also vary by category (6 for General, 9 for OBC, unlimited for SC/ST).</p>
+        </li>
+        <li>
+          <p class="faq-q">What is the age limit for RRB NTPC?</p>
+          <p class="faq-a">RRB NTPC has different age limits: Graduate posts 18–33 (General), 18–36 (OBC), 18–38 (SC/ST). 12th pass posts: 18–30 (General), 18–33 (OBC), 18–35 (SC/ST).</p>
+        </li>
+        <li>
+          <p class="faq-q">What is the age limit for IBPS PO?</p>
+          <p class="faq-a">IBPS PO age limit: 20–30 (General), 20–33 (OBC), 20–35 (SC/ST), 20–30 (EWS). Graduation is required.</p>
+        </li>
+        <li>
+          <p class="faq-q">Where are exam eligibility rules taken from?</p>
+          <p class="faq-a">Rules are based on official notifications from SSC (ssc.gov.in), UPSC (upsc.gov.in), RRB (indianrailways.gov.in), IBPS (ibps.in), and state boards (updated as of February 2026). Always confirm with the latest official notification for the specific exam cycle.</p>
+        </li>
+        <li>
+          <p class="faq-q">Do age limits change every year?</p>
+          <p class="faq-a">Age limits are generally stable but can change. Some exams adjust age limits based on reference dates (e.g., "as of August 1, 2026"). Always check the official notification for the exact exam cycle.</p>
+        </li>
+      </ul>
+    </section>
+
+    <nav class="related-tools" aria-label="Related tools">
+      <h2>Also Try</h2>
+      <ul>
+        <li><a href="../age-calculator-india/">Age Calculator (India)</a> – Exact age in years, months, days</li>
+        <li><a href="../salary-in-hand-calculator/">Salary In-Hand Calculator</a> – CTC to in-hand</li>
+        <li><a href="../ctc-breakup-calculator/">CTC Breakup Calculator</a> – Salary components</li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>© CalcDesk</strong></p>
+      <p class="footer-disclaimer">Informational utility tools for Indian users. Results are indicative; verify with official sources.</p>
+      <p><a href="../about.html">About</a> · <a href="../contact.html">Contact</a> · <a href="../privacy-policy.html">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    // Comprehensive exam database (updated February 2026)
+    var exams = [
+      // UPSC Exams
+      { name: 'UPSC Civil Services (IAS/IPS/IFS)', minAge: 21, maxAge: { gen: 32, obc: 35, sc: 37, st: 37, ews: 32 }, edu: 'graduate', group: 'UPSC' },
+      { name: 'UPSC CDS (Air Force)', minAge: 20, maxAge: { gen: 24, obc: 24, sc: 24, st: 24, ews: 24 }, edu: 'graduate', group: 'UPSC' },
+      { name: 'UPSC CDS (IMA/INA)', minAge: 19, maxAge: { gen: 25, obc: 25, sc: 25, st: 25, ews: 25 }, edu: '12th', group: 'UPSC' },
+      { name: 'UPSC CDS (OTA)', minAge: 19, maxAge: { gen: 25, obc: 25, sc: 25, st: 25, ews: 25 }, edu: 'graduate', group: 'UPSC' },
+      { name: 'UPSC NDA', minAge: 17, maxAge: { gen: 19, obc: 19, sc: 19, st: 19, ews: 19 }, edu: '12th', group: 'UPSC' },
+      { name: 'UPSC CAPF', minAge: 20, maxAge: { gen: 25, obc: 28, sc: 30, st: 30, ews: 25 }, edu: 'graduate', group: 'UPSC' },
+      
+      // SSC Exams
+      { name: 'SSC CGL', minAge: 18, maxAge: { gen: 32, obc: 35, sc: 37, st: 37, ews: 35 }, edu: 'graduate', group: 'SSC' },
+      { name: 'SSC CHSL', minAge: 18, maxAge: { gen: 27, obc: 30, sc: 32, st: 32, ews: 27 }, edu: '12th', group: 'SSC' },
+      { name: 'SSC MTS', minAge: 18, maxAge: { gen: 27, obc: 30, sc: 32, st: 32, ews: 27 }, edu: '10th', group: 'SSC' },
+      { name: 'SSC JE', minAge: 18, maxAge: { gen: 32, obc: 35, sc: 37, st: 37, ews: 35 }, edu: 'graduate', group: 'SSC' },
+      { name: 'SSC GD Constable', minAge: 18, maxAge: { gen: 23, obc: 26, sc: 28, st: 28, ews: 23 }, edu: '10th', group: 'SSC' },
+      
+      // Railway Exams (RRB)
+      { name: 'RRB NTPC (Graduate)', minAge: 18, maxAge: { gen: 33, obc: 36, sc: 38, st: 38, ews: 33 }, edu: 'graduate', group: 'RRB' },
+      { name: 'RRB NTPC (12th)', minAge: 18, maxAge: { gen: 30, obc: 33, sc: 35, st: 35, ews: 30 }, edu: '12th', group: 'RRB' },
+      { name: 'RRB Group D', minAge: 18, maxAge: { gen: 33, obc: 36, sc: 38, st: 38, ews: 33 }, edu: '10th', group: 'RRB' },
+      { name: 'RRB ALP', minAge: 18, maxAge: { gen: 30, obc: 33, sc: 35, st: 35, ews: 30 }, edu: '10th', group: 'RRB' },
+      { name: 'RRB JE', minAge: 18, maxAge: { gen: 33, obc: 36, sc: 38, st: 38, ews: 33 }, edu: 'graduate', group: 'RRB' },
+      
+      // Banking Exams (IBPS)
+      { name: 'IBPS PO', minAge: 20, maxAge: { gen: 30, obc: 33, sc: 35, st: 35, ews: 30 }, edu: 'graduate', group: 'Banking' },
+      { name: 'IBPS Clerk', minAge: 20, maxAge: { gen: 28, obc: 31, sc: 33, st: 33, ews: 28 }, edu: 'graduate', group: 'Banking' },
+      { name: 'IBPS SO', minAge: 20, maxAge: { gen: 30, obc: 33, sc: 35, st: 35, ews: 30 }, edu: 'graduate', group: 'Banking' },
+      { name: 'SBI PO', minAge: 21, maxAge: { gen: 30, obc: 33, sc: 35, st: 35, ews: 30 }, edu: 'graduate', group: 'Banking' },
+      { name: 'SBI Clerk', minAge: 20, maxAge: { gen: 28, obc: 31, sc: 33, st: 33, ews: 28 }, edu: 'graduate', group: 'Banking' },
+      
+      // Other Major Exams
+      { name: 'LIC AAO', minAge: 21, maxAge: { gen: 30, obc: 33, sc: 35, st: 35, ews: 30 }, edu: 'graduate', group: 'Other' },
+      { name: 'LIC ADO', minAge: 21, maxAge: { gen: 30, obc: 33, sc: 35, st: 35, ews: 30 }, edu: 'graduate', group: 'Other' },
+      { name: 'RBI Grade B', minAge: 21, maxAge: { gen: 30, obc: 33, sc: 35, st: 35, ews: 30 }, edu: 'graduate', group: 'Other' },
+      { name: 'RBI Assistant', minAge: 20, maxAge: { gen: 28, obc: 31, sc: 33, st: 33, ews: 28 }, edu: 'graduate', group: 'Other' }
+    ];
+
+    var eduOrder = { '10th': 1, '12th': 2, 'graduate': 3, 'postgraduate': 4 };
+    function eduMet(required, user) { return eduOrder[user] >= eduOrder[required]; }
+
+    var form = document.getElementById('exam-form');
+    var resultBox = document.getElementById('result-box');
+    var examListContainer = document.getElementById('exam-list-container');
+    var ageInput = document.getElementById('age');
+    var ageError = document.getElementById('age-error');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      ageError.textContent = '';
+      var age = parseInt(ageInput.value, 10);
+      if (isNaN(age) || age < 17 || age > 50) {
+        ageError.textContent = 'Enter age between 17 and 50.';
+        return;
+      }
+      var edu = document.getElementById('edu').value;
+      var cat = document.getElementById('cat').value;
+      var maxByCat = { gen: 'gen', obc: 'obc', sc: 'sc', st: 'st', ews: 'ews' };
+      var key = maxByCat[cat] || 'gen';
+      
+      var eligible = [];
+      var grouped = {};
+      
+      exams.forEach(function(ex) {
+        var maxAge = ex.maxAge[key];
+        if (age >= ex.minAge && age <= maxAge && eduMet(ex.edu, edu)) {
+          eligible.push(ex);
+          if (!grouped[ex.group]) grouped[ex.group] = [];
+          grouped[ex.group].push(ex.name);
+        }
+      });
+      
+      if (eligible.length === 0) {
+        examListContainer.innerHTML = '<p style="color:var(--color-text-muted);">No exams matched your criteria. Try adjusting your age, education level, or check official notifications for other opportunities.</p>';
+      } else {
+        var html = '<p style="margin-bottom:0.75rem; font-weight:500;">Found <strong>' + eligible.length + '</strong> eligible exam' + (eligible.length > 1 ? 's' : '') + ':</p>';
+        html += '<ul style="margin:0; padding-left:1.25rem; list-style:disc;">';
+        
+        // Group by exam authority
+        var groups = ['UPSC', 'SSC', 'RRB', 'Banking', 'Other'];
+        groups.forEach(function(group) {
+          if (grouped[group] && grouped[group].length > 0) {
+            html += '<li style="margin-bottom:0.5rem;"><strong>' + group + ':</strong><ul style="margin-top:0.25rem; padding-left:1.25rem;">';
+            grouped[group].forEach(function(name) {
+              html += '<li>' + name + '</li>';
+            });
+            html += '</ul></li>';
+          }
+        });
+        
+        html += '</ul>';
+        examListContainer.innerHTML = html;
+      }
+      
+      resultBox.hidden = false;
+      resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  })();
+  </script>
+  <script src="../js/nav.js"></script>
+</body>
+</html>

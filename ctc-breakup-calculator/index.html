@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTC Breakup Calculator India – Basic, HRA, Deductions | CalcDesk</title>
+  <meta name="description" content="See detailed CTC breakup India: basic salary, HRA, allowances, PF, gratuity. Free CTC breakup calculator with component-wise breakdown.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0d6efd">
+  <meta name="author" content="CalcDesk">
+  <!-- GitHub Pages: replace your-username. For calcdesk.in use commented line below. -->
+  <link rel="canonical" href="https://your-username.github.io/CalcDesk/ctc-breakup-calculator/">
+  <!-- <link rel="canonical" href="https://calcdesk.in/ctc-breakup-calculator/"> -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-username.github.io/CalcDesk/ctc-breakup-calculator/">
+  <!-- <meta property="og:url" content="https://calcdesk.in/ctc-breakup-calculator/"> -->
+  <meta property="og:title" content="CTC Breakup Calculator India – Basic, HRA, Deductions | CalcDesk">
+  <meta property="og:description" content="See detailed CTC breakup India: basic salary, HRA, allowances, PF, gratuity. Free CTC breakup calculator with component-wise breakdown.">
+  <meta property="og:locale" content="en_IN">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CTC Breakup Calculator India – Basic, HRA, Deductions | CalcDesk">
+  <meta name="twitter:description" content="See detailed CTC breakup India: basic salary, HRA, allowances, PF, gratuity. Free calculator.">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"CTC Breakup Calculator India","description":"Detailed CTC breakup with basic, HRA, allowances and deductions for India.","applicationCategory":"FinanceApplication"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is included in CTC in India?","acceptedAnswer":{"@type":"Answer","text":"CTC includes basic salary, HRA, special allowance, employer PF, gratuity, and other allowances. It is the total cost the company spends on you per year."}},
+    {"@type":"Question","name":"How is basic salary calculated from CTC?","acceptedAnswer":{"@type":"Answer","text":"Basic is often 40–50% of gross salary. This calculator uses 40% of monthly gross (CTC/12) as basic for PF and gratuity calculations."}},
+    {"@type":"Question","name":"What is the difference between CTC and in-hand salary?","acceptedAnswer":{"@type":"Answer","text":"CTC is total cost to company. In-hand is what you receive after deducting employee PF, professional tax, and income tax from your gross salary."}}
+  ]}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="../" class="brand">CalcDesk</a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="../salary-in-hand-calculator/">Salary In-Hand</a></li>
+          <li><a href="../ctc-breakup-calculator/">CTC Breakup</a></li>
+          <li><a href="../exam-eligibility-checker/">Exam Eligibility</a></li>
+          <li><a href="../age-calculator-india/">Age Calculator</a></li>
+          <li><a href="../wedding-cost-calculator/">Wedding Cost</a></li>
+          <li><a href="../unit-converter-india/">Unit Converter</a></li>
+          <li><a href="../bmi-calculator-india/">BMI Calculator</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">CTC Breakup Calculator (India)</h1>
+    <p class="page-lead">See a detailed CTC breakup: basic salary, HRA, allowances, PF, gratuity. For HR and offer-letter structure—salary structure India in one view.</p>
+
+    <section class="tool-card" aria-labelledby="calc-heading">
+      <h2 id="calc-heading">Get Your CTC Breakup</h2>
+      <p><strong>Sample presets:</strong> Use quick presets or enter any annual CTC. Structure is indicative; companies may use different ratios.</p>
+      <form id="ctc-form" novalidate>
+        <div class="form-group">
+          <label for="ctc">Annual CTC (₹)</label>
+          <input type="number" id="ctc" name="ctc" min="100000" step="10000" placeholder="e.g. 800000" required>
+          <span id="ctc-error" class="error-msg" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+          <span class="visually-hidden">Quick presets</span>
+          <button type="button" class="btn btn-outline" data-ctc="600000">6 Lakh</button>
+          <button type="button" class="btn btn-outline" data-ctc="1000000">10 Lakh</button>
+          <button type="button" class="btn btn-outline" data-ctc="1500000">15 Lakh</button>
+        </div>
+        <div class="form-group">
+          <label for="metro">City type (HRA)</label>
+          <select id="metro" name="metro">
+            <option value="metro">Metro (50% of basic)</option>
+            <option value="nonmetro">Non-Metro (40% of basic)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Show CTC Breakup</button>
+      </form>
+
+      <div id="result-box" class="result-box" hidden aria-live="polite">
+        <h3>CTC Breakup (Annual)</h3>
+        <div class="result-row"><span>Basic Salary</span><span class="result-value" id="res-basic">—</span></div>
+        <div class="result-row"><span>HRA</span><span class="result-value" id="res-hra">—</span></div>
+        <div class="result-row"><span>Special Allowance</span><span class="result-value" id="res-special">—</span></div>
+        <div class="result-row"><span>Gross Salary (Basic + HRA + Allowance)</span><span class="result-value" id="res-gross">—</span></div>
+        <div class="result-row"><span>Employer PF (12% of basic)</span><span class="result-value" id="res-epf">—</span></div>
+        <div class="result-row"><span>Gratuity (4.81% of basic)</span><span class="result-value" id="res-gratuity">—</span></div>
+        <div class="result-row"><span><strong>Total CTC</strong></span><span class="result-value" id="res-ctc">—</span></div>
+      </div>
+    </section>
+
+    <section class="content-section" id="components">
+      <h2>Understanding CTC Components (HR / Offer-Letter View)</h2>
+      <p>This <strong>CTC breakup India</strong> tool explains how CTC is structured for offer letters and HR. <strong>Basic salary</strong> is the core pay used for PF and gratuity; in India it is often 40–50% of gross. <strong>HRA</strong> (House Rent Allowance) is tax-exempt up to limits if the employee pays rent; we use 50% of basic for metro and 40% for non-metro. <strong>Special allowance</strong> is the balance of gross after basic and HRA; it is fully taxable.</p>
+      <p><strong>Employer PF</strong> is 12% of basic (employer contribution to EPF). <strong>Gratuity</strong> is 4.81% of basic per year, paid by the employer; it is part of CTC but not in the monthly slip. This calculator gives a standard <strong>salary structure India</strong>; companies may use different ratios. For take-home pay, use our <a href="../salary-in-hand-calculator/">Salary In-Hand Calculator</a>.</p>
+    </section>
+
+    <section class="content-section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <ul class="faq-list">
+        <li>
+          <p class="faq-q">What is included in CTC in India?</p>
+          <p class="faq-a">CTC includes basic salary, HRA, special allowance, employer PF, gratuity, and other allowances. It is the total cost the company spends on you per year.</p>
+        </li>
+        <li>
+          <p class="faq-q">How is basic salary calculated from CTC?</p>
+          <p class="faq-a">Basic is often 40–50% of gross salary. This calculator uses 40% of monthly gross (CTC/12) as basic for PF and gratuity calculations.</p>
+        </li>
+        <li>
+          <p class="faq-q">What is the difference between CTC and in-hand salary?</p>
+          <p class="faq-a">CTC is total cost to company. In-hand is what you receive after deducting employee PF, professional tax, and income tax from your gross salary.</p>
+        </li>
+      </ul>
+    </section>
+
+    <nav class="related-tools" aria-label="Related tools">
+      <h2>Also Try</h2>
+      <ul>
+        <li><a href="../salary-in-hand-calculator/">Salary In-Hand Calculator</a> – CTC to monthly in-hand</li>
+        <li><a href="../age-calculator-india/">Age Calculator (India)</a> – Exact age in years, months, days</li>
+        <li><a href="../unit-converter-india/">Unit Converter (India)</a> – Tola, bigha, guntha & metric</li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>© CalcDesk</strong></p>
+      <p class="footer-disclaimer">Informational utility tools for Indian users. Results are indicative; verify with official sources.</p>
+      <p><a href="../about.html">About</a> · <a href="../contact.html">Contact</a> · <a href="../privacy-policy.html">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script>
+  /* CTC Breakup – minimal JS; presets and breakup logic */
+  (function() {
+    var form = document.getElementById('ctc-form');
+    var resultBox = document.getElementById('result-box');
+    var ctcInput = document.getElementById('ctc');
+    var ctcError = document.getElementById('ctc-error');
+
+    function formatINR(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+
+    document.querySelectorAll('[data-ctc]').forEach(function(btn) {
+      btn.addEventListener('click', function() { ctcInput.value = this.getAttribute('data-ctc'); });
+    });
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      ctcError.textContent = '';
+      var ctc = parseFloat(ctcInput.value, 10);
+      if (isNaN(ctc) || ctc < 100000) {
+        ctcError.textContent = 'Please enter a valid CTC (e.g. 800000).';
+        return;
+      }
+      var monthlyGross = ctc / 12;
+      var basicAnnual = monthlyGross * 0.40 * 12;
+      var hraPct = document.getElementById('metro').value === 'metro' ? 0.50 : 0.40;
+      var hraAnnual = basicAnnual * hraPct;
+      var epfAnnual = basicAnnual * 0.12;
+      var gratuityAnnual = basicAnnual * 0.0481;
+      var specialAnnual = ctc - basicAnnual - hraAnnual - epfAnnual - gratuityAnnual;
+      var grossAnnual = basicAnnual + hraAnnual + specialAnnual;
+
+      document.getElementById('res-basic').textContent = formatINR(basicAnnual);
+      document.getElementById('res-hra').textContent = formatINR(hraAnnual);
+      document.getElementById('res-special').textContent = formatINR(specialAnnual);
+      document.getElementById('res-gross').textContent = formatINR(grossAnnual);
+      document.getElementById('res-epf').textContent = formatINR(epfAnnual);
+      document.getElementById('res-gratuity').textContent = formatINR(gratuityAnnual);
+      document.getElementById('res-ctc').textContent = formatINR(ctc);
+      resultBox.hidden = false;
+      resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  })();
+  </script>
+  <script src="../js/nav.js"></script>
+</body>
+</html>
